@@ -1,9 +1,10 @@
-Math.floor(Math.random())
+playerName=prompt("")
 
-Math.random
+const playerNameChanger= document.querySelector("#playerName")
+const playerHpChanger = document.querySelector("#playerHp")
+const enemyHpChanger = document.querySelector("#enemyHp")
 
-
-const playerName = "Billy"
+playerNameChanger.textContent=+playerName
 
 let playerHp = 100
 let enemyHp = 100
@@ -13,24 +14,22 @@ function rollDice() {
 }
 
 
-console.log(rollDice)
-
-
-let playerRoll = rollDice()
-let enemyRoll = rollDice()
-
-    function fightRound(){
+function fightRound(){
+        
+    const playerRoll = rollDice()
+    const enemyRoll = rollDice()
 
     if (playerRoll > enemyRoll) {
-        console.log("player dose not have skill issue")
-        let playerHit = playerRoll - enemyRoll
+        console.log("player hit enemy")
+        const playerHit = playerRoll - enemyRoll
         enemyHp -= playerHit
         console.log(enemyHp)
     }
 
 
     else if (playerRoll < enemyRoll) {
-        let enemyHit = enemyRoll - playerRoll
+        console.log("enemy has skill")
+        const enemyHit = enemyRoll - playerRoll
         playerHp -= enemyHit
         console.log(playerHp)
     }
@@ -38,4 +37,12 @@ let enemyRoll = rollDice()
     else {
         console.log("you both suck")
     }
+
+    playerHpChanger.textContent= playerHp
+    enemyHpChanger.textContent=enemyHp
 }
+
+
+const playButton = document.querySelector("#play-button")
+
+playButton.addEventListener("click", fightRound)
