@@ -1,0 +1,49 @@
+
+
+main{
+    background-color:  turquoise;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+button{
+    margin: 50px;
+}
+
+button :hover{
+    color: turquoise;
+}
+.hp-low{
+    color: red;
+
+
+}
+
+body{
+    font: "Comic Sans";
+    
+
+}
+
+
+
+.player{
+    color: green;
+
+}
+
+
+.enemy {
+    color: red;
+}
+
+.pain{
+    color: rgb(255, 208, 99);
+}
+
+.combat-log{
+    color: red;
+    font-weight: bold;
+}
