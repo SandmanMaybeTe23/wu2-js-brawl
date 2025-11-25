@@ -1,7 +1,7 @@
 
 
 main{
-    background-color:  rgb(155, 60, 60);
+    background-color:  rgb(134, 60, 155);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -46,4 +46,17 @@ body{
 .combat-log{
     color: red;
     font-weight: bold;
+}
+
+.enemy-img{
+    max-width: 100px;
+    max-height: 100px;
+    
+
+}
+
+
+.player-img{
+    max-width: 100px;
+    max-height: 100px;
 }

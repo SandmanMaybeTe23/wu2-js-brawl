@@ -34,16 +34,18 @@ function log(msg,type){
 
 
 const playerAttack = [
-    "are just better and you deal :" ,
+    "just better and you deal: " ,
    //nope 
 ]
 
 
 function spawnEnemy() {
+    debugger
+
     const enemyNames = ["Goblin", "Orc", "Troll", "SANS", "ECIN"]
     const name = enemyNames[Math.floor(Math.random() * enemyNames.length)]
     const attack = Math.ceil(Math.random() * 2)
-    const hp = Math.floor(Math.random() * 50 + 30)/attack
+    const hp = Math.ceil(Math.floor(Math.random() * 10 + 10)/attack)
     
     return new Enemy(name, hp, attack)
 }
@@ -57,7 +59,7 @@ class Enemy {
 }
 
 
-const enemy = spawnEnemy()
+let enemy = spawnEnemy()
 
 
 enemyNameChanger.textContent=enemy.name
@@ -68,7 +70,6 @@ function rollDice() {
 
 
 function fightRound(){
-        
     const playerRoll = rollDice()
     const enemyRoll = rollDice()
 
@@ -106,13 +107,11 @@ function fightRound(){
 
 
 let last = 0
-
 function gameLoop(timestamp) {
     if (timestamp >= last + 500) {
         fightRound()
         last = timestamp;
     }
-    round = window.requestAnimationFrame(gameLoop)
 
  if (playerHp < 1) {
         playButton.disabled = true
@@ -125,6 +124,7 @@ function gameLoop(timestamp) {
     if (enemy.hp < 1) {
         log(` you have slain ${enemy.name}! wow im so impress :/` , "player")
         enemy = spawnEnemy()
+        enemyNameChanger.textContent=enemy.name
         log(`well you need more to kill her you have ${enemy.name} go kill him yea`, "enemy")
         const heal = Math.floor(Math.random() * 20 + 10)
         log(`you scream MEDIC! and the medic heal you ${heal} hp! yup so true`, "player")
