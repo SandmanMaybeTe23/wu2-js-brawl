@@ -1,6 +1,3 @@
-playerName=prompt("what is your name player")
-
-
 const playButton = document.querySelector("#play-button")
 const stopButton = document.querySelector("#stop-button")
 const playerNameChanger= document.querySelector("#playerName")
@@ -9,6 +6,7 @@ const enemyNameChanger= document.querySelector("#enemyName")
 const enemyHpChanger = document.querySelector("#enemyHp")
 
 
+playerName=prompt("what is your name player")
 playerNameChanger.textContent=playerName
 
 let playerHp = 100
