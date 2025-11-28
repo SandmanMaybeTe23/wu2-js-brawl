@@ -1,4 +1,4 @@
-playerName="addwa"
+playerName=prompt("what is your name player")
 
 
 const playButton = document.querySelector("#play-button")
@@ -94,7 +94,7 @@ function fightRound(){
 
 
 
-    if (playerHp < 1 || enemy.hp < 1){
+    if (playerHp < 1 ){
         playButton.disabled = true
     }
 

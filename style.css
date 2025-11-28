@@ -3,13 +3,17 @@
 main{
     background-color:  rgb(134, 60, 155);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
 button{
     margin: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 button :hover{
@@ -27,6 +31,24 @@ body{
 
 }
 
+nav{
+
+  border: solid rgb(134, 60, 155) 50px; 
+  background-color: white;
+  ul{
+    padding: 50px;
+    width: 500px;
+}
+
+
+}
+
+
+
+.battle_ground{
+    display: flex;
+
+}
 
 
 .player{
@@ -48,15 +70,11 @@ body{
     font-weight: bold;
 }
 
-.enemy-img{
+
+img{
     max-width: 100px;
     max-height: 100px;
-    
-
+    padding-left: 10px;
 }
 
 
-.player-img{
-    max-width: 100px;
-    max-height: 100px;
-}
